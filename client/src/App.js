@@ -1,9 +1,9 @@
-import abi from "./contract/chai.json";
+import pizzaABI from "./contract/pizza.json"; // assuming you have a pizza contract ABI
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import Buy from "./components/Buy";
-import Memos from "./components/Memos";
-import chai from "./chai.png";
+import BuyPizza from "./components/BuyPizza"; // a component for buying pizza
+import PizzaMemos from "./components/PizzaMemos"; // a component for pizza memos
+import pizzaImage from "./pizza.png"; // an image of pizza
 import "./App.css";
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
   const [account, setAccount] = useState("None");
   useEffect(() => {
     const connectWallet = async () => {
-      const contractAddress = "0x46436dcb1b29b111a00bb61f5475b420ef1104eb";
-      const contractABI = abi.abi;
+      const contractAddress = "0xYourPizzaContractAddress"; // Replace with your pizza contract address
+      const contractABI = pizzaABI.abi; // assuming your pizza contract ABI is stored in pizza.json
       try {
         const { ethereum } = window;
 
@@ -43,7 +43,7 @@ function App() {
           setAccount(account);
           setState({ provider, signer, contract });
         } else {
-          alert("Please install metamask");
+          alert("Please install Metamask");
         }
       } catch (error) {
         console.log(error);
@@ -54,16 +54,13 @@ function App() {
   // console.log(state);
   return (
     <div style={{ backgroundColor: "#EFEFEF", height: "100%" }}>
-      <img src={chai} className="img-fluid" alt=".." width="100%" />
-      <p
-        class="text-muted lead "
-        style={{ marginTop: "10px", marginLeft: "5px" }}
-      >
+      <img src={pizzaImage} className="img-fluid" alt="Pizza" width="100%" />
+      <p className="text-muted lead" style={{ marginTop: "10px", marginLeft: "5px" }}>
         <small>Connected Account - {account}</small>
       </p>
       <div className="container">
-        <Buy state={state} />
-        <Memos state={state} />
+        <BuyPizza state={state} />
+        <PizzaMemos state={state} />
       </div>
     </div>
   );
