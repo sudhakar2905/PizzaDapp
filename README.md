@@ -1,6 +1,6 @@
  Pizza Buying DApp
 
-🍵 This is a beginner-friendly decentralized application (DApp) for purchasing Pizza using cryptocurrency while including a personalized message. ☕
+🍵 This is a beginner-friendly decentralized application (DApp) for purchasing Pizza using cryptocurrency while including a personalized message. 🍕🍕
 
 ### Tutorial Video
 
