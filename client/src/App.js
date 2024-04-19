@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import BuyPizza from "./components/BuyPizza"; // a component for buying pizza
 import PizzaMemos from "./components/PizzaMemos"; // a component for pizza memos
-import pizzaImage from "./pizza.png"; // an image of pizza
+import pizzaImage from "./pizza.jpeg"; // an image of pizza
 import "./App.css";
 
 function App() {
