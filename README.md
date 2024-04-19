@@ -1,70 +1,46 @@
-# Chai Buying DApp
+# Buy Pizza App
 
-🍵 This is a beginner-friendly decentralized application (DApp) for purchasing chai using cryptocurrency while including a personalized message. ☕️
-
-### Tutorial Video
-
-[Chai Buying DApp Tutorial English](https://www.youtube.com/watch?v=YourVideoID)
-
-[Chai Buying DApp Tutorial Hindi](https://youtu.be/NxDGHynpA4s?si=Up2pVEUws3KrYSRn)
-
-Watch my tutorial video to learn how to use the Chai Buying DApp!
+This project is a React application for buying pizza using Ethereum.
 
 ## Getting Started
 
-To get this DApp running, follow the steps below:
+To run the app locally, follow these steps:
 
-### Clone the Repository
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Run `npm install` to install the dependencies.
+4. Run `npm start` to start the development server.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
-```
-git clone <repository-url>
-```
+The page will reload when you make changes to the code. You may also see any lint errors in the console.
 
-### Contract Compilation and Deployment
+## How to Buy Pizza
 
-1. Install dependencies:
-   ```
-   npm install
-   ```
+1. Make sure you have MetaMask installed in your browser and connected to the Ethereum network.
+2. Enter your name and choose your desired toppings in the form provided.
+3. Click on the "Buy Pizza" button to initiate the transaction.
+4. Confirm the transaction in MetaMask.
+5. Once the transaction is confirmed, your pizza order will be processed, and the payment will be transferred to the pizza owner.
 
-2. Compile the contracts:
-   ```
-   npx hardhat compile
-   ```
+## Available Scripts
 
-3. Create a `.env` file:
-   - Mention the QuickNode Goerli/Sepoli URL and your private key in the `.env` file.
+In the project directory, you can run:
 
-4. Deploy the smart contract:
-   ```
-   npx hardhat run scripts/finalDeploy.js --network <network-name>
-   ```
-   Replace `<network-name>` with the desired network (e.g., Goerli, Sepoli).
+- `npm start`: Runs the app in the development mode.
+- `npm test`: Launches the test runner in the interactive watch mode.
+- `npm run build`: Builds the app for production to the `build` folder.
 
-### Frontend Setup
+## Learn More
 
-1. Ensure you have MetaMask installed in your browser.
+You can learn more in the [Create React App documentation](https://create-react-app.dev/).
 
-2. Navigate to the `client` directory:
-   ```
-   cd client
-   ```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-3. Install frontend dependencies:
-   ```
-   npm install
-   ```
+## Deployment
 
-4. Start the frontend server:
-   ```
-   npm start
-   ```
+This section provides information about deploying the app for production. For more details, refer to the [deployment documentation](https://facebook.github.io/create-react-app/docs/deployment).
 
-## Usage
+## Troubleshooting
 
-Once the DApp is set up:
+If you encounter any issues, refer to the [React documentation](https://reactjs.org/docs/troubleshooting.html) for troubleshooting tips.
 
-1. Connect your MetaMask wallet to the DApp.
-2. Send cryptocurrency to purchase chai.
-3. Write a sweet message to accompany your purchase.
-4. Enjoy your chai!
